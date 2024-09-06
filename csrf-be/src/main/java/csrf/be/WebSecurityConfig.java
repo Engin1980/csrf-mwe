@@ -90,6 +90,8 @@ final class CsrfCheckFilter extends OncePerRequestFilter {
     logger.info("Header {}={}", key, request.getHeader(key));
     key = "X-CSRF-TOKEN";
     logger.info("Header {}={}", key, request.getHeader(key));
+    key = "X-XSRF-TOKEN";
+    logger.info("Header {}={}", key, request.getHeader(key));
 
     if (request.getCookies() != null)
       Arrays.stream(request.getCookies())

@@ -10,8 +10,9 @@ function App() {
     const csrf: string | null = localStorage.getItem("csrf");
     if (csrf) {
       console.log("inter.req setting csrf " + csrf);
-      c.headers["XSRF-TOKEN"] = csrf;
-      c.headers["X-CSRF-TOKEN"] = csrf;
+      c.headers["aXSRF-TOKEN"] = csrf;
+      c.headers["X-aCSRF-TOKEN"] = csrf;
+      c.headers["X-aXSRF-TOKEN"] = csrf;
     }
     return c;
   });
